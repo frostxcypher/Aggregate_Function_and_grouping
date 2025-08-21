@@ -6,9 +6,9 @@
 
 - Method:
 
--- Members are joined with borrow records using a left join.
+- Members are joined with borrow records using a left join.
 
--- Grouping is done by member ID.
+- Grouping is done by member ID.
 
 - A count of borrowed books per member is calculated.
 
@@ -32,36 +32,36 @@
 
 - Objective: Find the average number of books borrowed per member (only for members who have borrowed).
 
-Method:
+- Method:
 
-A temporary summary is created by grouping borrow records per member and counting borrow totals.
+- A temporary summary is created by grouping borrow records per member and counting borrow totals.
 
-The average is taken across these per-member counts.
+- The average is taken across these per-member counts.
 
-Outcome: A single numeric value representing the average borrowing activity of members who have borrowed at least once.
+- Outcome: A single numeric value representing the average borrowing activity of members who have borrowed at least once.
 
-4. Book Popularity (Times Borrowed)
+## 4. Book Popularity (Times Borrowed)
 
-Objective: Show how many times each book has been borrowed.
+- Objective: Show how many times each book has been borrowed.
 
-Method:
+- Method:
 
-Books are joined with borrow records using a left join.
+- Books are joined with borrow records using a left join.
 
-Grouping is done by book ID.
+- Grouping is done by book ID.
 
-A count of borrow records is calculated for each book.
+- A count of borrow records is calculated for each book.
 
-Outcome: Each book is listed along with the number of times it has been borrowed. Books with no borrow records appear with zero.
+- Outcome: Each book is listed along with the number of times it has been borrowed. Books with no borrow records appear with zero.
 
-5. Frequent Borrowers (Members with 2 or More Borrows)
+## 5. Frequent Borrowers (Members with 2 or More Borrows)
 
-Objective: Identify members who borrowed at least two books.
+- Objective: Identify members who borrowed at least two books.
 
-Method:
+- Method:
 
-Members are joined with borrow records and grouped by member ID.
+- Members are joined with borrow records and grouped by member ID.
 
-A filter is applied on the grouped result to keep only members with a total borrowed count greater than or equal to two.
+- A filter is applied on the grouped result to keep only members with a total borrowed count greater than or equal to two.
 
 Outcome: A list of frequent borrowers with their names and total borrow counts.
